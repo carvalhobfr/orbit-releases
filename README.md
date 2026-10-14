@@ -4,9 +4,11 @@
 
 **One app. Many tools. You decide what to focus on.**
 
-A command center for your Mac, built around the idea that you shouldn't open six apps to get one day done. Pick a workspace, and Orbit becomes the thing you are doing right now: your apps and folders, your tasks, your timer, your Mac's health, even your iPhone.
+A command center for your Mac, built around the idea that you shouldn't open six apps to get one day done. Pick a workspace, and Orbit becomes the thing you are doing right now: your apps and folders, your tasks, your timer, your Mac's health.
 
 [**Download the latest release**](../../releases/latest) · macOS 14 or later
+
+**English** · [Português (BR)](README.pt-BR.md)
 
 </div>
 
@@ -22,9 +24,8 @@ A command center for your Mac, built around the idea that you shouldn't open six
 Orbit is not a single-purpose utility. It is a hub with a lot of rooms, and **you choose which one is open**.
 
 - **Workspaces set the scene.** "Work", "Studio", "Side project": each one is a set of apps, folders and links. Switch workspace and everything you need is a click away. Switching never launches anything by itself.
-- **The menu bar panel is yours to arrange.** Drag its blocks into the order you want, remove the ones you don't use, add them back later. Today it can hold your workspace switcher, favorites, a currency converter, Mac Health readings, the busiest apps, a running timer, your clipboard status and your iPhone's battery.
+- **The menu bar panel is yours to arrange.** Drag its blocks into the order you want, remove the ones you don't use, add them back later. It can hold your workspace switcher, favorites, a currency converter, Mac Health readings, a running timer and your clipboard status.
 - **A command palette for everything.** Press **⌃⌥Space** and type: jump to a workspace, convert `100 eur in brl`, find a note, add a task, ask the assistant.
-- **The sidebar shows what is relevant.** The iPhone section appears only while a phone is connected, unless you ask to keep it.
 
 <table>
 <tr>
@@ -49,7 +50,7 @@ Orbit is not a single-purpose utility. It is a hub with a lot of rooms, and **yo
 
 ### Get things done
 - **Tasks** with due dates written the way you say them (English and Portuguese), **quick notes** and **snippets**, with export to Obsidian and Apple Notes.
-- **Clock**: countdown timers (`25m`, `1h30`, `10:00`), a pomodoro with your own lengths or presets (Classic 25/5, Deep work 50/10, Sprint 15/3), a sound for each timer, and world clocks by city.
+- **Clock**: countdown timers (`25m`, `1h30`, `10:00`), a pomodoro cycle with your own lengths, and world clocks by city.
 - **Currency** with daily ECB reference rates, cached for offline use, and exact decimal math (no floating-point rounding).
 - **Clipboard history**, opt-in and local.
 - **Widgets** for currency, tasks, favorites, an overview and the clock.
@@ -61,21 +62,22 @@ Orbit is not a single-purpose utility. It is a hub with a lot of rooms, and **yo
 
 ### Look after your Mac
 - **Live readings**: CPU, memory, storage, battery, network, thermal state.
-- **Checkup**: memory pressure, crashes, drive and battery health, and protection checks (FileVault, firewall, Gatekeeper, updates, Time Machine), each with a plain explanation.
-- **Disk map**: a treemap of your home folder you can walk into, with search, category filters and a ranking of your largest files.
-- **Clean up safely**: caches, build folders, duplicates and old large files go to the **Trash**, never straight to deletion, and only after you review a preview and confirm.
-- **Apps**: sizes, last use, clear caches, uninstall, broken startup items, system extensions, and update checks (Sparkle, the App Store and Homebrew).
-- **Smart scan**: one button that runs the checks and tells you where to look first.
+- **Disk map**: a treemap of your home folder you can walk into, with live progress while it scans and the last map kept to open at once.
+- **Clean up safely**: caches and build folders go to the **Trash**, never straight to deletion, and only after you review a preview and confirm.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="images/health-map-dark.png">
   <img src="images/health-map-light.png" alt="The disk map: a treemap of the home folder with the largest folders highlighted">
 </picture>
 
-### Look after your iPhone
-- **Battery**: charge, cycles and maximum capacity. **Storage** and **apps by size**, with the data and caches each app keeps.
-- It shows up over a **cable or Wi-Fi sync**. Reading is the default: nothing is installed, copied or paired from here.
-- You can switch on **removing an app** from the Mac. It is off by default, asks for a confirmation that names the app, and refuses Apple's own apps.
+## Coming in the next release
+
+Already built and being checked before it ships. Not in the current download yet.
+
+- **Devices.** Your iPhone and iPad over a cable or Wi-Fi sync: battery health (charge, cycles, maximum capacity), storage, apps by size with the data each app keeps, the Finder backups on this Mac, an hourly battery and storage history, a battery widget and a menu bar block, and opt-in low and charged notifications. Reading is the default: nothing is installed, copied or paired. Removing an app from the phone is opt-in, asks for a confirmation that names the app and refuses Apple's own apps.
+- **Accessories** (opt-in): the charge of your AirPods, Magic Keyboard, Mouse and Trackpad, and game controllers.
+- **Mac Health, further:** a checkup (memory pressure, crashes, drive and battery health, and protection checks such as FileVault, firewall, Gatekeeper, updates and Time Machine, each with a plain explanation); a smart scan that tells you where to look first; app sizes, last use, uninstall and update checks (Sparkle, the App Store and Homebrew); startup items and system extensions; duplicates and old large files; disk map search, category filters, a largest-files ranking and external drives.
+- **Menu bar and clock:** a "Busiest apps" block, pomodoro presets (Classic 25/5, Deep work 50/10, Sprint 15/3) and a sound for each timer.
 
 ## Principles
 
@@ -95,18 +97,9 @@ Requires **macOS 14 or later**.
 ## Good to know
 
 - **Updating:** Orbit tells you when a newer version is published (Settings → Updates) and opens its release page. Download it and replace the app in Applications. Orbit never downloads or installs anything by itself.
-- **Permissions are asked for when a feature needs them**: notifications, microphone, Full Disk Access (only to map your whole home folder without prompts) and Bluetooth (only if you look for paired phones). macOS may ask again after an update.
+- **Permissions are asked for when a feature needs them**: notifications, microphone and Full Disk Access (only to map your whole home folder without prompts). macOS may ask again after an update.
 - **Widgets** show "Open Orbit to sync" in these builds, because sharing data with a widget needs an Apple developer team in the signature.
-- **Administrator actions** (removing a broken system startup item) are off by default. Turn them on in Settings; macOS then asks for your password in its own window, and Orbit never sees it.
 
 ## About this repository
 
-This repository only holds the downloadable builds. Orbit's in-app update check reads the latest release here. Screenshots are made from sample data and will be refreshed.
-
----
-
-# Orbit (pt-BR)
-
-Uma central de comando para o seu Mac: espaços de trabalho, barra de menu que você arruma do seu jeito, paleta de comandos, tarefas, relógio, moeda, saúde do Mac e do iPhone, e um assistente por texto ou voz. **Um app, muitas ferramentas, e você decide o foco.** Dados locais, sem telemetria.
-
-Baixe a [última versão](../../releases/latest), descompacte, mova o `Orbit.app` para Aplicativos e, na primeira abertura, vá em **Ajustes do Sistema → Privacidade e Segurança → Abrir Mesmo Assim** (os builds não são notarizados pela Apple). Requer macOS 14 ou mais recente.
+This repository only holds the downloadable builds and this page; the source code is private. Orbit's in-app update check reads the latest release here. Each release lists what changed and how to install it. Screenshots are made from sample data.
