@@ -6,11 +6,61 @@
 
 A command center for your Mac, built around the idea that you shouldn't open six apps to get one day done. Pick a workspace, and Orbit becomes the thing you are doing right now: your apps and folders, your tasks, your timer, your Mac's health.
 
-[**Download the latest release**](../../releases/latest) · macOS 14 or later
+[**Download for macOS**](../../releases/latest) · [**Linux 0.1.0 Preview**](https://github.com/carvalhobfr/orbit-releases/releases/tag/desktop-v0.1.0)
 
 **English** · [Português (BR)](README.pt-BR.md)
 
 </div>
+
+## Downloads
+
+| Edition | Status | Download |
+| --- | --- | --- |
+| Orbit for macOS | Stable, macOS 14 or later | [Latest Mac release](https://github.com/carvalhobfr/orbit-releases/releases/latest) |
+| Orbit Desktop 0.1.0 for Linux | **Preview** — fewer features than the native Mac app | [Linux downloads and release notes](https://github.com/carvalhobfr/orbit-releases/releases/tag/desktop-v0.1.0) |
+| Orbit Desktop for Windows | **Not available yet** | Installers and runtime dependencies still need validation on Windows |
+
+## Orbit Desktop 0.1.0 Preview
+
+The Linux edition has its own version. **0.1.0 is a preview, not feature parity with the native Mac app.** English and Brazilian Portuguese are included. Windows downloads will be added only after their installers have been validated.
+
+| Feature | Preview status | Scope or limitation |
+| --- | --- | --- |
+| Palette, calculator and currency conversion | Available | Currency uses ECB reference rates and a local cache; a first rate needs a connection |
+| Tasks and notes | Available | Add, edit, complete, pin and delete as appropriate; stored locally |
+| Timers, pomodoro and world clocks | Available | Desktop notifications; no per-timer sounds or floating countdown |
+| System health | Available | Read-only CPU, memory, storage, battery, network and uptime; readings depend on the hardware |
+| Snippets | Partial | Copy and fill placeholders; no expansion while typing in other apps |
+| File and folder search | Partial | Names in the home folder, with a bounded scan; results can be incomplete; programs and scripts are shown in their folder rather than run |
+| Tray, global shortcut and open at login | Partial | Depend on the desktop session; Wayland needs its shortcut portal; real GNOME/KDE acceptance remains pending |
+| Voice, AI research, window arrangements and desktop widgets | Not available | These native Mac features are not part of this preview |
+| Workspaces, clipboard history, cleanup and device integrations | Not available | Not part of the desktop preview |
+| Sync with the Mac app | Not available | The editions keep separate local data |
+
+![Linux preview: palette and currency conversion](images/desktop-linux-preview.png)
+![Linux preview: tasks](images/desktop-linux-preview-tasks.png)
+
+*Linux captures under Xvfb with fixture tasks. They show the preview window; real desktop-session acceptance remains pending.*
+
+### Choose a Linux package
+
+Packages are optimized Release builds for the named CPU architecture. Check `uname -m`: use x86_64 for Intel/AMD PCs and arm64 for aarch64/ARM64 machines.
+
+| Architecture | Debian / Ubuntu | Fedora / RPM | Portable AppImage |
+| --- | --- | --- | --- |
+| x86_64 | [DEB](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-x86_64.deb) | [RPM](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-x86_64.rpm) | Not available in this preview |
+| arm64 | [DEB](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-arm64.deb) | [RPM](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-arm64.rpm) | [AppImage](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-arm64.AppImage) |
+
+Download [SHA256SUMS](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/SHA256SUMS) next to your package and check it with `sha256sum --ignore-missing -c SHA256SUMS`. These packages are not digitally signed.
+
+### Install the Linux preview
+
+- Debian / Ubuntu: `sudo apt install ./Orbit-Desktop-0.1.0-linux-x86_64.deb` (replace x86_64 with arm64 for that CPU).
+- Fedora: `sudo dnf install ./Orbit-Desktop-0.1.0-linux-x86_64.rpm` (replace the architecture when needed).
+- ARM64 AppImage: `chmod +x Orbit-Desktop-0.1.0-linux-arm64.AppImage`, then run it. It needs a desktop's base libraries and FUSE; when FUSE is unavailable, use `APPIMAGE_EXTRACT_AND_RUN=1 ./Orbit-Desktop-0.1.0-linux-arm64.AppImage`.
+- Start **Orbit** from the app menu, or run `orbit-desktop`. The default palette shortcut is **Ctrl+Alt+Space** where the session supports it.
+
+The data file is local, in `~/.local/share/orbit-desktop/`; back up that folder before testing a preview with important data. No telemetry or automatic sync. The release notes list the exact package checks and remaining platform limits. The screenshots and feature descriptions below show the **native Mac edition**.
 
 <br>
 
