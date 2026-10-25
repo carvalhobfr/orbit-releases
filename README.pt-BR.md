@@ -6,7 +6,7 @@
 
 Uma central de comando para o seu Mac, pensada para você não precisar abrir seis apps para dar conta de um dia. Escolha um workspace e o Orbit vira aquilo que você está fazendo agora: seus apps e pastas, suas tarefas, seu timer, a saúde do seu Mac.
 
-[**Baixe para macOS**](../../releases/latest) · [**Linux 0.1.0 Preview**](https://github.com/carvalhobfr/orbit-releases/releases/tag/desktop-v0.1.0)
+[**Baixe para macOS**](../../releases/latest) · [**Linux 0.2.0 Preview**](https://github.com/carvalhobfr/orbit-releases/releases/tag/desktop-v0.2.0)
 
 [English](README.md) · **Português (BR)**
 
@@ -17,12 +17,12 @@ Uma central de comando para o seu Mac, pensada para você não precisar abrir se
 | Edição | Estado | Download |
 | --- | --- | --- |
 | Orbit para macOS | Estável, macOS 14 ou mais recente | [Última versão para Mac](https://github.com/carvalhobfr/orbit-releases/releases/latest) |
-| Orbit Desktop 0.1.0 para Linux | **Prévia** — menos recursos que o app nativo do Mac | [Downloads Linux e notas da versão](https://github.com/carvalhobfr/orbit-releases/releases/tag/desktop-v0.1.0) |
-| Orbit Desktop para Windows | **Ainda não disponível** | Os instaladores e as dependências de runtime ainda precisam de validação no Windows |
+| Orbit Desktop 0.2.0 para Linux | **Prévia** — menos recursos que o app nativo do Mac | [Downloads Linux e notas da versão](https://github.com/carvalhobfr/orbit-releases/releases/tag/desktop-v0.2.0) |
+| Orbit Desktop para Windows | **Ainda não disponível** | MSI/NSIS e checagens do pacote extraído passaram; instalação limpa e aceitação da interface real continuam pendentes |
 
-## Orbit Desktop 0.1.0 Preview
+## Orbit Desktop 0.2.0 Preview
 
-A edição Linux tem sua própria versão. **0.1.0 é uma prévia, sem equivalência de recursos com o app nativo do Mac.** Inclui inglês e português do Brasil. Os downloads para Windows só serão adicionados depois que os instaladores forem validados.
+A edição Linux tem sua própria versão. **0.2.0 é uma prévia, sem equivalência de recursos com o app nativo do Mac.** Inclui inglês e português do Brasil. Windows continua em rascunho separado até validar instalação limpa e interação real.
 
 | Recurso | Estado na prévia | Alcance ou limitação |
 | --- | --- | --- |
@@ -34,13 +34,16 @@ A edição Linux tem sua própria versão. **0.1.0 é uma prévia, sem equivalê
 | Busca de arquivos e pastas | Parcial | Nomes na pasta pessoal, com varredura limitada; os resultados podem ser incompletos; programas e scripts são mostrados na pasta, sem execução |
 | Bandeja, atalho global e abrir no login | Parcial | Dependem da sessão; Wayland precisa do portal de atalhos; a validação manual em GNOME/KDE reais segue pendente |
 | Voz, pesquisa com IA, organização de janelas e widgets | Não disponível | Esses recursos nativos do Mac não fazem parte desta prévia |
-| Workspaces, histórico do clipboard, limpeza e dispositivos | Não disponível | Não fazem parte da prévia desktop |
+| Workspaces e favoritos | Disponível | Criar/renomear/selecionar/ordenar/duplicar/arquivar; adicionar/editar/remover/ordenar favoritos e abrir explicitamente; trocar não abre nada |
+| Backup e restauração locais | Disponível | Salvar em Downloads, conferir contagens, confirmar substituição e preservar os dados anteriores; arquivos/apps/login/cache ficam fora |
+| Histórico do clipboard, limpeza e dispositivos | Não disponível | Não fazem parte da prévia desktop |
 | Sincronização com o app do Mac | Não disponível | As edições mantêm dados locais separados |
 
 ![Prévia Linux: paleta e conversão de moedas](images/desktop-linux-preview.png)
 ![Prévia Linux: tarefas](images/desktop-linux-preview-tasks.png)
+![Prévia Linux: backup local com dados de teste](images/desktop-linux-preview-backup.png)
 
-*Capturas Linux no Xvfb com tarefas de teste. Mostram a janela da prévia; a aceitação em sessões reais de desktop segue pendente.*
+*Capturas Linux no Xvfb com tarefas e backups de teste. Mostram a janela da prévia; a aceitação em sessões reais de desktop segue pendente.*
 
 ### Escolha o pacote Linux
 
@@ -48,19 +51,19 @@ Os pacotes são builds Release otimizados para a arquitetura indicada. Confira `
 
 | Arquitetura | Debian / Ubuntu | Fedora / RPM | AppImage portátil |
 | --- | --- | --- | --- |
-| x86_64 | [DEB](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-x86_64.deb) | [RPM](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-x86_64.rpm) | Indisponível nesta prévia |
-| arm64 | [DEB](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-arm64.deb) | [RPM](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-arm64.rpm) | [AppImage](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/Orbit-Desktop-0.1.0-linux-arm64.AppImage) |
+| x86_64 | [DEB](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.2.0/Orbit-Desktop-0.2.0-linux-x86_64.deb) | [RPM](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.2.0/Orbit-Desktop-0.2.0-linux-x86_64.rpm) | Indisponível nesta prévia |
+| arm64 | [DEB](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.2.0/Orbit-Desktop-0.2.0-linux-arm64.deb) | [RPM](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.2.0/Orbit-Desktop-0.2.0-linux-arm64.rpm) | [AppImage](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.2.0/Orbit-Desktop-0.2.0-linux-arm64.AppImage) |
 
-Baixe [SHA256SUMS](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.1.0/SHA256SUMS) junto do pacote e confira com `sha256sum --ignore-missing -c SHA256SUMS`. Estes pacotes não têm assinatura digital.
+Baixe [SHA256SUMS](https://github.com/carvalhobfr/orbit-releases/releases/download/desktop-v0.2.0/SHA256SUMS) junto do pacote e confira com `sha256sum --ignore-missing -c SHA256SUMS`. Estes pacotes não têm assinatura digital.
 
 ### Instale a prévia Linux
 
-- Debian / Ubuntu: `sudo apt install ./Orbit-Desktop-0.1.0-linux-x86_64.deb` (troque x86_64 por arm64 para essa CPU).
-- Fedora: `sudo dnf install ./Orbit-Desktop-0.1.0-linux-x86_64.rpm` (troque a arquitetura quando necessário).
-- AppImage ARM64: `chmod +x Orbit-Desktop-0.1.0-linux-arm64.AppImage` e execute o arquivo. Ele precisa das bibliotecas básicas de um desktop e de FUSE; sem FUSE, use `APPIMAGE_EXTRACT_AND_RUN=1 ./Orbit-Desktop-0.1.0-linux-arm64.AppImage`.
+- Debian / Ubuntu: `sudo apt install ./Orbit-Desktop-0.2.0-linux-x86_64.deb` (troque x86_64 por arm64 para essa CPU).
+- Fedora: `sudo dnf install ./Orbit-Desktop-0.2.0-linux-x86_64.rpm` (troque a arquitetura quando necessário).
+- AppImage ARM64: `chmod +x Orbit-Desktop-0.2.0-linux-arm64.AppImage` e execute o arquivo. Favoritos de aplicativos também precisam do utilitário `gio` no host. Ele precisa das bibliotecas básicas de um desktop e de FUSE; sem FUSE, use `APPIMAGE_EXTRACT_AND_RUN=1 ./Orbit-Desktop-0.2.0-linux-arm64.AppImage`.
 - Abra **Orbit** pelo menu de aplicativos ou rode `orbit-desktop`. O atalho padrão da paleta é **Ctrl+Alt+Espaço**, quando a sessão oferece suporte.
 
-O arquivo de dados é local, em `~/.local/share/orbit-desktop/`; faça uma cópia dessa pasta antes de testar uma prévia com dados importantes. Sem telemetria ou sincronização automática. As notas da versão listam as checagens exatas dos pacotes e as limitações de plataforma restantes. As capturas e descrições de recursos abaixo mostram a **edição nativa do Mac**.
+O arquivo de dados é local, em `~/.local/share/orbit-desktop/`; faça uma cópia antes de atualizar. A 0.2 grava dados versão 7; a prévia Linux 0.1 pública não os lê. Ajustes exporta backups JSON locais e mostra prévia antes de confirmar a restauração; dados anteriores são copiados primeiro. IDs e vínculos de workspace são preservados. Caminhos podem precisar de edição em outro SO; não inclui importação do banco nativo Mac nem sincronização. Sem telemetria ou sincronização automática. As notas da versão listam as checagens exatas dos pacotes e as limitações de plataforma restantes. As capturas e descrições de recursos abaixo mostram a **edição nativa do Mac**.
 
 <br>
 
